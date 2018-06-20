@@ -1,0 +1,10 @@
+// Blocks
+
+tile.filled_glass.name=Verre rempli de liquide
+
+// Items
+
+item.syringe_item_empty.name=Seringue vide
+item.syringe_item_full.name=Seringue pleine (%d/4 %s)
+
+item.syringe_item.desc=Vous pouvez remplir cette seringue en faisant clic droit sur la source du liquide que vous désirez. Vous pouvez ensuite remplir %d blocs de verre avec ce liquide.

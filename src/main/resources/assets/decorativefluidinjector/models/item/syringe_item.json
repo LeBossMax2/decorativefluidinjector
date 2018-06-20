@@ -1,0 +1,14 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "decorativefluidinjector:items/syringe_empty"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "full": 1
+            },
+            "model": "decorativefluidinjector:item/syringe_item_full"
+        }
+    ]
+}

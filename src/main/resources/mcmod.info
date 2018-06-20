@@ -1,0 +1,16 @@
+[
+{
+  "modid": "decorativefluidinjector",
+  "name": "DecorativeFluidInjector Mod",
+  "description": "You can fill glass with liquids.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["LeBossMax2"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
