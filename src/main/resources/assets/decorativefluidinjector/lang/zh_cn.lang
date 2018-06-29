@@ -1,0 +1,10 @@
+// Blocks
+
+tile.filled_glass.name=流体玻璃
+
+// Items
+
+item.syringe_item_empty.name=空注射器
+item.syringe_item_full.name=满注射器（%d/%d %s）
+
+item.syringe_item.desc=手持空注射器右击流体以收集，然后你可以将其注入为%d玻璃。
