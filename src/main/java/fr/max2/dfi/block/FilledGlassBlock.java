@@ -50,7 +50,6 @@ public class FilledGlassBlock extends BlockGlass implements ITileEntityProvider
 	public FilledGlassBlock()
 	{
 		super(Material.GLASS, true);
-		this.isBlockContainer = true;
 		this.setHardness(0.3F);
 		this.setSoundType(SoundType.GLASS);
 	}
@@ -279,20 +278,6 @@ public class FilledGlassBlock extends BlockGlass implements ITileEntityProvider
 		}
 		
 		return super.canSustainPlant(state, world, pos, direction, plantable);
-	}
-	
-	@Override
-	public boolean causesDownwardCurrent(IBlockAccess worldIn, BlockPos pos, EnumFacing side)
-	{
-		TileEntity te = worldIn.getTileEntity(pos);
-		
-		if (te instanceof FilledGlassTileEntity)
-		{
-			IBlockState baseState = ((FilledGlassTileEntity) te).getBaseBlock();
-			return baseState.getBlock().causesDownwardCurrent(worldIn, pos, side);
-		}
-		
-		return super.causesDownwardCurrent(worldIn, pos, side);
 	}
 	
 	@Override

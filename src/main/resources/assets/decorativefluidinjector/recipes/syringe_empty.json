@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"pattern": [
+		"  I",
+		"IG ",
+		" I "
+	],
+	"ingredients": [
+		{
+			"type": "minecraft:item",
+			"item": "decorativefluidinjector:syringe_item"
+		}
+	],
+	"result": {
+		"item": "decorativefluidinjector:syringe_item"
+	}
+}

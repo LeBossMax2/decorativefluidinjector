@@ -7,10 +7,7 @@ import fr.max2.dfi.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -22,7 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = DecorativeFluidInjectorMod.MOD_ID, name = DecorativeFluidInjectorMod.MOD_NAME, version = DecorativeFluidInjectorMod.MOD_VERSION, acceptedMinecraftVersions = "[1.11,1.11.2]")
+@Mod(modid = DecorativeFluidInjectorMod.MOD_ID, name = DecorativeFluidInjectorMod.MOD_NAME, version = DecorativeFluidInjectorMod.MOD_VERSION, acceptedMinecraftVersions = "[1.12,1.12.2]")
 public class DecorativeFluidInjectorMod
 {
 	public static final String
@@ -43,14 +40,14 @@ public class DecorativeFluidInjectorMod
 		
 		proxy.preInit();
 		
-		GameRegistry.addRecipe(new ItemStack(Registry.SYRINGE_ITEM),
+		/*GameRegistry.addRecipe(new ItemStack(Registry.SYRINGE_ITEM),
 			"  I",
 			"IG ",
 			" I ",
 			'I', Items.IRON_INGOT,
 			'G', Blocks.GLASS_PANE);
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(Registry.SYRINGE_ITEM), Registry.SYRINGE_ITEM);
+		*/
+		//GameRegistry.addShapelessRecipe(new ItemStack(Registry.SYRINGE_ITEM), Registry.SYRINGE_ITEM);
 	}
 	
 	@EventHandler

@@ -29,8 +29,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.google.common.base.Function;
+import java.util.function.Function;
 
 import fr.max2.dfi.block.FilledGlassBlock;
 
@@ -42,7 +41,7 @@ public enum FilledGlassModelLoader implements ICustomModelLoader
 	public boolean accepts(ResourceLocation modelLocation)
 	{
 		return modelLocation.getResourceDomain().equals(MOD_ID) &&
-			   modelLocation.getResourcePath().equals("models/block/filled_glass");
+			   modelLocation.getResourcePath().equals("filled_glass");
 	}
 
 	@Override

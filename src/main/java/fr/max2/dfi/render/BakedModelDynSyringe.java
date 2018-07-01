@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 
 import javax.vecmath.Matrix4f;
 
 import org.apache.commons.lang3.tuple.Pair;
 
-import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
 
 import net.minecraft.block.state.IBlockState;
@@ -30,7 +30,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
-import net.minecraftforge.client.model.IPerspectiveAwareModel;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fluids.Fluid;
@@ -42,7 +41,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 @EventBusSubscriber(modid = MOD_ID, value = Side.CLIENT)
-public class BakedModelDynSyringe implements IPerspectiveAwareModel
+public class BakedModelDynSyringe implements IBakedModel
 {
     private static final float NORTH_Z_FLUID = 7.498f / 16f;
     private static final float SOUTH_Z_FLUID = 8.502f / 16f;
@@ -154,12 +153,7 @@ public class BakedModelDynSyringe implements IPerspectiveAwareModel
 	@Override
 	public Pair<? extends IBakedModel, Matrix4f> handlePerspective(TransformType cameraTransformType)
 	{
-		if (baseModel instanceof IPerspectiveAwareModel)
-		{
-			return Pair.of(this, ((IPerspectiveAwareModel) baseModel).handlePerspective(cameraTransformType).getRight());
-		}
-		
-		return Pair.of(this, null);
+		return Pair.of(this, baseModel.handlePerspective(cameraTransformType).getRight());
 	}
 	
 	public static class CustomItemOverrideList extends ItemOverrideList

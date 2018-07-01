@@ -12,6 +12,7 @@ import fr.max2.dfi.registry.FillableBlockRegistry;
 import fr.max2.dfi.registry.IFillableBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.IItemPropertyGetter;
@@ -80,7 +81,7 @@ public class SyringeItem extends Item
 	
 	@Override
     @SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced)
+	public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
 	{
 		tooltip.add(net.minecraft.client.resources.I18n.format("item.syringe_item.desc", ModConfig.usePerBucket));
 	}
