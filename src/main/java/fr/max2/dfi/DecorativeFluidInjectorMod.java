@@ -19,13 +19,13 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = DecorativeFluidInjectorMod.MOD_ID, name = DecorativeFluidInjectorMod.MOD_NAME, version = DecorativeFluidInjectorMod.MOD_VERSION, acceptedMinecraftVersions = "[1.12,1.12.2]")
+@Mod(modid = DecorativeFluidInjectorMod.MOD_ID, name = DecorativeFluidInjectorMod.MOD_NAME, version = DecorativeFluidInjectorMod.MOD_VERSION, acceptedMinecraftVersions = "[1.12,1.12.2]", dependencies = "required-after:forge@[14.21.0.2363,);")
 public class DecorativeFluidInjectorMod
 {
 	public static final String
 		MOD_ID = "decorativefluidinjector",
 		MOD_NAME = "DecorativeFluidInjector",
-		MOD_VERSION = "1.0";
+		MOD_VERSION = "1.0.1";
 
 	public static final ModelResourceLocation SYRINGE_LOC = new ModelResourceLocation(MOD_ID + ":syringe_item", "inventory");
 	public static final ModelResourceLocation SYRINGE_FULL_LOC = new ModelResourceLocation(MOD_ID + ":syringe_item_full", "inventory");
