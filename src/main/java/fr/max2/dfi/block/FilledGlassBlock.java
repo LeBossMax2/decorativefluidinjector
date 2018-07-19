@@ -146,6 +146,19 @@ public class FilledGlassBlock extends BlockGlass implements ITileEntityProvider
 	}
 	
 	@Override
+	public float getSlipperiness(IBlockState state, IBlockAccess world, BlockPos pos, Entity entity)
+	{
+		TileEntity te = world.getTileEntity(pos);
+		
+		if (te instanceof FilledGlassTileEntity)
+		{
+			IBlockState baseState = ((FilledGlassTileEntity) te).getBaseBlock();
+			return baseState.getBlock().getSlipperiness(baseState, world, pos, entity);
+		}
+		return super.getSlipperiness(state, world, pos, entity);
+	}
+	
+	@Override
 	public boolean addDestroyEffects(World world, BlockPos pos, ParticleManager manager)
 	{
 		TileEntity te = world.getTileEntity(pos);
